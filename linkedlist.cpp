@@ -25,7 +25,7 @@ class List{
 
             if (START == NULL || nim <= START->noMhs)
             {
-                if ((current != NULL) && (nim >= current->noMhs))
+                if ((START != NULL) && (nim >= START->noMhs))
                 {
                     cout << "\nDuplikasi noMhs tidak diijinkan\n";
                     return;
@@ -56,7 +56,7 @@ class List{
             return (START == NULL);
         }
 
-        bool Search(int nim, Node **previous, NOde **current){
+        bool Search(int nim, Node **previous, Node **current){
             *previous = START;
             *current = START;
 
@@ -69,7 +69,7 @@ class List{
 
         bool delNode(int nim){
             Node *current, *previous;
-            if (!search(nim, &previous, &current))
+            if (!Search(nim, &previous, &current))
                 return false;
             if (current == START)
                 START = START->next;
