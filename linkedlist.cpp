@@ -8,11 +8,11 @@ class Node{
     Node *next;
 };
 
-class List{
+class LinkedList{
     Node *START;
 
     public:
-        List(){
+        LinkedList(){
             START = NULL;
         }
         void addNode(){
@@ -96,20 +96,5 @@ class List{
 };
 
 int main(){
-    List mhs;
-    int nim;
-    char ch;
-    while (1){
-        cout
-             << "Menu" << endl;
-        cout << endl
-             << "1. Menambahkan data kedalam list" << endl;
-        cout << "2. Mengahpus data dari dalam list " << endl;
-        cout << "3. Menampilkan semua data dalam list" << endl;
-        cout << "4. Mencari data dalam list" << endl;
-        cout << "5. Keluarr!!" << endl;
-        cout
-             << "Masukkan pilihan (1-5): " << endl;
-        cin >> ch;
-    }
+    LinkedList mhs;
 }
