@@ -59,5 +59,13 @@ class List{
         bool Search(int nim, Node **previous, NOde **current){
             *previous = START;
             *current = START;
+
+            while ((*current != NULL) && (nim != (*current)->noMhs)){
+                *previous = *current;
+                *current = (*current)->next;
+            }
+            return (*current != NULL);
         }
+
+        
 };
