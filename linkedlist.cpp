@@ -91,7 +91,15 @@ class List{
                     currentNode = currentNode->next;
                 }
                 cout << endl;
-            }
-                
+            }   
         }
 };
+
+int main(){
+    List mhs;
+    int nim;
+    char ch;
+    while (1){
+        
+    }
+}
