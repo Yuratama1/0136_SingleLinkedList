@@ -78,4 +78,8 @@ class List{
             delete current;
             return true;
         }
+        
+        void traverse(){
+            
+        }
 };
