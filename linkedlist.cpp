@@ -76,5 +76,6 @@ class List{
             else
                 previous->next = current->next;
             delete current;
+            return true;
         }
 };
