@@ -55,4 +55,9 @@ class List{
         bool listEmpty(){
             return (START == NULL);
         }
+
+        bool Search(int nim, Node **previous, NOde **current){
+            *previous = START;
+            *current = START;
+        }
 };
