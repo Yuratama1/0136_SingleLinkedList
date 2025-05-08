@@ -111,8 +111,5 @@ int main(){
         cout
              << "Masukkan pilihan (1-5): " << endl;
         cin >> ch;
-        switch (ch){
-            case
-        }
     }
 }
