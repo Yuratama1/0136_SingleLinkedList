@@ -35,23 +35,23 @@ class List{
             nodeBaru->next = START;
             START = nodeBaru;
             return;
-        }
-        
-        Node *previous = START;
-        Node *current = START;
 
-        while ((current != NULL) && (nim >= current->noMhs))
-        {
+            Node *previous = START;
+            Node *current = START;
+
+            while ((current != NULL) && (nim >= current->noMhs))
+            {
             if(nim == current->noMhs){
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return;
                 previous = current;
                 current = current->next;
-            }
+                }
             nodeBaru->next = current;
             previous->next - nodeBaru;
+            }
         }
-
+        
         bool listEmpty(){
             return (START == NULL);
         }
@@ -80,6 +80,18 @@ class List{
         }
         
         void traverse(){
-            
+            if(listEmpty()){
+                cout << "\nList Kosong\n";
+            }
+            else{
+                cout << "\nData didalam list adalah\n";
+                Node *currentNode = START;
+                while (currentNode != NULL){
+                    cout << currentNode->noMhs << endl;
+                    currentNode = currentNode->next;
+                }
+                cout << endl;
+            }
+                
         }
 };
