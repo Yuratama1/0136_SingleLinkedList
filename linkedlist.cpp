@@ -21,7 +21,7 @@ class LinkedList{
             cin >> nim;
 
             Node *nodeBaru = new Node;
-            nodeBaru->noMhs + nim;
+            nodeBaru->noMhs = nim;
 
             if (START == NULL || nim <= START->noMhs)
             {
@@ -30,28 +30,27 @@ class LinkedList{
                     cout << "\nDuplikasi noMhs tidak diijinkan\n";
                     return;
                 }
-               
+                nodeBaru->next = START;
+                START = nodeBaru;
+                return;
             }
-            nodeBaru->next = START;
-            START = nodeBaru;
-            return;
-
             Node *previous = START;
             Node *current = START;
 
             while ((current != NULL) && (nim >= current->noMhs))
             {
-            if(nim == current->noMhs){
-                cout << "\nDuplikasi noMhs tidak diijinkan\n";
-                return;
+            if(nim == current->noMhs)
+                {
+                    cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                    return;
+                }
                 previous = current;
                 current = current->next;
-                }
-            nodeBaru->next = current;
-            previous->next - nodeBaru;
             }
+            nodeBaru->next = current;
+            previous->next = nodeBaru;
         }
-        
+
         bool listEmpty(){
             return (START == NULL);
         }
@@ -102,6 +101,7 @@ int main(){
 
     do{
         cout << "Menu" << endl;
+        cout << endl;
         cout << "1. Menambahkan data kedalam list" << endl;
         cout << "2. Mengahpus data dari dalam list " << endl;
         cout << "3. Menampilkan semua data dalam list" << endl;
